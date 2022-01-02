@@ -1,7 +1,7 @@
 # colatz-conjecture
 
 # About The Project
-Script provides Collatz conjecture numbers/3n + 1 numbers/Hillstone numbers graph of a given starting number.
+Script provides Collatz conjecture numbers/3n + 1 numbers/Hillstone numbers graph for a given starting number.
 
 # Built With
 Python 3.8.0
