@@ -40,7 +40,12 @@ class CollatzConjecture():
 
 if __name__ == '__main__':
     print("Program that shows Collatz Conjecture and Hillstone numbers")
-    input = int(input("Provide the number: "))
-    number = re.sub('[!?@#$\[\]<>%^&*()]a-zA-Z', '', input)
+    numbersString = ""
+    while numbersString == "" or numbersString == "0":
+        inputString = input("Provide the number not equal to 0 and an integer: ")
+        numbersString = re.sub('[!?@#$\[\]<>%^&*()a-zA-Z]', '', inputString)
+        if numbersString == "" or numbersString == "0":
+            print("Input must be a number and not equal to 0!")
+    number = int(numbersString)
     collatz = CollatzConjecture(number)
     collatz.run()
