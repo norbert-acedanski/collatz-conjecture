@@ -8,30 +8,33 @@ class CollatzConjecture():
         self.xValues = []
 
     def computeCollatzNumbers(self):
-        self.collatzNumbers.append(self.startNumber)
         number = self.startNumber
-        i = 0
-        self.xValues.append(i)
-        while number != 1:
+        iteration = 0
+        self.collatzNumbers.append(number)
+        self.xValues.append(iteration)
+        while (number != 1 and number != -1 and number != -5 and number != -17) or iteration == 0:
             if number % 2 == 0:
                 number = int(number/2)
             else:
                 number = int(3*number + 1)
-            i += 1
+            iteration += 1
             self.collatzNumbers.append(number)
-            self.xValues.append(i)
+            self.xValues.append(iteration)
         print("Collatz numbers for the number " + str(self.startNumber) + ": " + str(self.collatzNumbers))
-        print("Number of steps: " + str(len(self.xValues)))
-        print("Maximum number: " + str(max(self.collatzNumbers)))
+        print("Number of steps: " + str(len(self.xValues) - 1))
+        if self.collatzNumbers[0] > 0:
+            print("Maximum number: " + str(max(self.collatzNumbers)))
+        else:
+            print("Maximum number: " + str(min(self.collatzNumbers)))
     
     def plotNumbers(self):
-        fig = plt.figure()
+        fig = plt.figure("Colatz Conjecture Graph")
         fig.clear()
-        plt.plot(self.xValues, self.collatzNumbers)
+        plt.plot(self.xValues, self.collatzNumbers, marker="o")
         plt.draw()
         plt.xlabel("Steps")
         plt.ylabel("Numbers after each iteration")
-        plt.title("Measurements")
+        plt.title("Hillstone/3n + 1 Numbers")
         plt.show()
 
     def run(self):
