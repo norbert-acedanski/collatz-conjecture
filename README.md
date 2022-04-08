@@ -10,7 +10,11 @@ Python 3.8.0
 ### Requirements
 
 All required packages in requirements.txt file.
-To install all required packages, type "_pip install -r requirements.txt_" in the terminal.
+To install all required packages, type:
+```console
+pip install -r requirements.txt
+```
+ in the terminal.
 
 ### Working with document-statistics:
 1. Run the script.
