@@ -4,7 +4,7 @@
 Script provides Collatz conjecture numbers/3n + 1 numbers/Hillstone numbers graph for a given starting number.
 
 # Built With
-Python 3.8.0
+Python 3.9.10
 
 # Getting started
 ### Requirements
