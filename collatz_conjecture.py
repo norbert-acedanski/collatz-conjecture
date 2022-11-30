@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import re
 
+
 class CollatzConjecture():
     def __init__(self, start_number):
         self.start_number = start_number
@@ -20,12 +21,12 @@ class CollatzConjecture():
             iteration += 1
             self.collatz_numbers.append(number)
             self.x_values.append(iteration)
-        print("Collatz numbers for the number " + str(self.start_number) + ": " + str(self.collatz_numbers))
-        print("Number of steps: " + str(len(self.x_values) - 1))
+        print(f"Collatz numbers for the number {self.start_number}: {self.collatz_numbers}")
+        print(f"Number of steps: {len(self.x_values) - 1}")
         if self.collatz_numbers[0] > 0:
-            print("Maximum number: " + str(max(self.collatz_numbers)))
+            print(f"Maximum number: {max(self.collatz_numbers)}")
         else:
-            print("Maximum number: " + str(min(self.collatz_numbers)))
+            print(f"Maximum number: {min(self.collatz_numbers)}")
     
     def plot_numbers(self):
         fig = plt.figure("Colatz Conjecture Graph")
@@ -40,6 +41,7 @@ class CollatzConjecture():
     def run(self):
         self.compute_collatz_numbers()
         self.plot_numbers()
+
 
 if __name__ == '__main__':
     print("Program that shows Collatz Conjecture and Hillstone numbers")
