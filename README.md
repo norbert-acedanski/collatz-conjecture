@@ -1,7 +1,7 @@
 # colatz-conjecture
 
 # About The Project
-Script provides Collatz conjecture numbers/3n + 1 numbers/Hillstone numbers graph for a given starting number.
+Script provides Collatz conjecture / 3n + 1 / Hillstone numbers graph for a given starting number.
 
 # Built With
 Python 3.9.10
@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
  in the terminal.
 
-### Working with document-statistics:
+### Working with colatz-conjecture:
 1. Run the script.
 2. Enter a whole number not equal to 0.
 3. Script should generate graph of numbers and print number of steps and maximum number in the terminal.
